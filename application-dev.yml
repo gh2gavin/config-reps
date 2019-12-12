@@ -9,7 +9,7 @@ spring:
       override-none: true
       override-system-properties: false
   datasource:
-    url: jdbc:mysql://106.75.27.9:3306/cloud?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
+    url: jdbc:mysql://106.75.27.9:3306/cloud?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: thsoft@2019
