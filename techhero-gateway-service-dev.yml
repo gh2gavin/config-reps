@@ -1,7 +1,7 @@
 spring:
   zipkin:
     rabbitmq:
-      queue: zipkin
+      queue: zipkin-kkx
   sleuth:
     sampler:
       percentage: 1
