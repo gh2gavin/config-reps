@@ -10,7 +10,7 @@ spring:
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.yukong.entity
+  typeAliasesPackage: com.techhero.platform.api.entity
   global-config:
     db-config:
       #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
@@ -40,10 +40,11 @@ mybatis-plus:
     #配置JdbcTypeForNull, oracle数据库必须配置
     jdbc-type-for-null: 'null'
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 # Logger Config
 #logging:
 #  level:
-#    com.yukong.panda.user.mapper: debug
-#    com.yukong.panda.common.base.mapper: debug
+#    com.techhero.platform.bizc.mapper: debug
+#    com.techhero.platform.common.base.mapper: debug
 
 

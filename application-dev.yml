@@ -2,18 +2,19 @@ server:
   tomcat:
     max-threads: 500 # Maximum amount of worker threads.
     min-spare-threads: 50 # Minimum amount of worker threads
+
 spring:
   cloud:
     config:
       override-none: true
       override-system-properties: false
   datasource:
-    url: jdbc:oracle:thin:@47.104.80.42:1521:orcl
-    driver-class-name: oracle.jdbc.driver.OracleDriver
-    username: cloud
-    password: root
+    url: jdbc:mysql://106.75.27.9:3306/cloud?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: thsoft@2019
   redis:
-    host: techhero-redis
+    host: 192.168.28.222
     port: 6379
     password: 
     timeout: 10000
@@ -24,7 +25,7 @@ spring:
         max-active: 5
         max-wait: 10000
   rabbitmq:
-    host: techhero-rabbitmq
+    host: 47.104.80.42
     port: 5672
     username: guest
     password: guest
@@ -32,19 +33,22 @@ spring:
     multipart:
       max-file-size: 1000MB
       max-request-size: 1000MB
+
 redis:
   cache:
     expiration: 3601
+
 ribbon:
   eager-load:
     enabled: true
-    clients: techhero-auth,techhero-user-service
+    clients: techhero-auth-service,techhero-user-service
   Httpclient:
     enabled: true
   OkHttp:
     enabled: false
   ReadTimeout: 10000
   ConnectTimeout: 10000
+
 feign:
   hystrix:
     enabled: true
@@ -62,6 +66,7 @@ feign:
       enabled: true
     response:
       enabled: true
+
 hystrix:
   threadpool:
     default:
@@ -74,6 +79,7 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
+
 #关闭验证
 management:
   metrics:
