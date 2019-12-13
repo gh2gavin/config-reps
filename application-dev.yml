@@ -41,7 +41,7 @@ redis:
 ribbon:
   eager-load:
     enabled: true
-    clients: techhero-auth-service,techhero-user-service
+    clients: techhero-auth,techhero-user-service
   Httpclient:
     enabled: true
   OkHttp:
