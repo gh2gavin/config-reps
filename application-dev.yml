@@ -14,7 +14,7 @@ spring:
     username: root
     password: thsoft@2019
   redis:
-    host: 192.168.28.222
+    host: techhero-server
     port: 6379
     password: 
     timeout: 10000
@@ -25,7 +25,7 @@ spring:
         max-active: 5
         max-wait: 10000
   rabbitmq:
-    host: 47.104.80.42
+    host: techhero-rabbitmq
     port: 5672
     username: guest
     password: guest
