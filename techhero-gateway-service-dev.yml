@@ -21,7 +21,7 @@ ignore:
 
 swagger:
   client:
-    - techhero-user-service
+    - techhero-system-service
     - techhero-gen-service
 
 # 关闭默认路由
