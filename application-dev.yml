@@ -8,14 +8,14 @@ spring:
       override-none: true
       override-system-properties: false
   datasource:
-    url: jdbc:mysql://106.75.27.9:3306/cloud?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
-    driver-class-name: com.mysql.jdbc.Driver
-    username: root
-    password: thsoft@2019
-    #url: jdbc:oracle:thin:@47.104.80.42:1521:orcl
-    #driver-class-name: oracle.jdbc.driver.OracleDriver
-    #username: cloud
-    #password: root
+    #url: jdbc:mysql://106.75.27.9:3306/cloud?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
+    #driver-class-name: com.mysql.jdbc.Driver
+    #username: root
+    #password: thsoft@2019
+    url: jdbc:oracle:thin:@192.168.28.221:1521:orcl
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: kkx_cloud
+    password: thsoft2020
   redis:
     host: 192.168.28.224
     port: 6379
@@ -42,7 +42,7 @@ redis:
 ribbon:
   eager-load:
     enabled: true
-    clients: techhero-auth-service,techhero-system-service
+    clients: techhero-auth,techhero-system-service
   Httpclient:
     enabled: true
   OkHttp:
